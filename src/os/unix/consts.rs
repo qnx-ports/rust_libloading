@@ -87,6 +87,7 @@ mod posix {
             target_os = "fuchsia",
             target_os = "redox",
             target_os = "nto",
+            target_os = "qnx",
             target_os = "hurd",
             target_os = "cygwin",
         ))] {
@@ -127,6 +128,7 @@ mod posix {
             target_os = "fuchsia",
             target_os = "redox",
             target_os = "nto",
+            target_os = "qnx",
             target_os = "hurd",
             target_os = "cygwin",
         ))] {
@@ -181,6 +183,7 @@ mod posix {
             target_os = "fuchsia",
             target_os = "redox",
             target_os = "nto",
+            target_os = "qnx",
             target_os = "hurd",
         ))] {
             pub(super) const RTLD_GLOBAL: c_int = 0x100;
@@ -195,6 +198,7 @@ mod posix {
         if #[cfg(any(
            target_os = "netbsd",
            target_os = "nto",
+           target_os = "qnx",
         ))] {
             pub(super) const RTLD_LOCAL: c_int = 0x200;
         } else if #[cfg(target_os = "aix")] {
